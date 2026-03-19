@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  width: 520px;
+  height: 520px;
+}
+
+/* BASE DOS PRATOS */
+.prato {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: all 0.6s ease;
+}
+
+/* PRATO PRINCIPAL */
+.ativo {
+  width: 340px;
+  height: 340px;
+
+  z-index: 3;
+}
+
+/* PRATO SUPERIOR (segue a curva) */
+.proximo {
+  width: 140px;
+  height: 140px;
+
+  transform: translate(-50%, -50%) rotate(-58deg) translate(260px) rotate(35deg);
+
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* PRATO INFERIOR (segue a curva) */
+.anterior {
+  width: 140px;
+  height: 140px;
+
+  transform: translate(-50%, -50%) rotate(58deg) translate(260px) rotate(-35deg);
+
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* ANIMAÇÕES */
+.cima {
+  animation: descer 0.6s ease;
+}
+
+.baixo {
+  animation: subir 0.6s ease;
+}
+
+@keyframes descer {
+  from {
+    transform: translate(-50%, -150%) scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes subir {
+  from {
+    transform: translate(-50%, 50%) scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

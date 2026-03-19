@@ -1,0 +1,33 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 57px;
+    justify-content: center;
+}
+
+h2 {
+    color: #ce5a2c;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 45px;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.button {
+    color: white;
+    background-color: #ce5a2c;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 32px;
+    font-family: "montserrat", sans-serif;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    margin: 32px auto;
+
+    &:hover {
+        transition: 0.4s;
+        transform: scale(1.1);
+
+    }
+}

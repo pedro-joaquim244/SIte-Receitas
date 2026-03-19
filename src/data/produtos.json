@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "titulo": "Dubai",
+        "Companhia aérea": "Emirates",
+        "Classe do voo": "Executiva",
+        "Duração do voo": "14h",
+        "preco": 5200,
+        "Categoria": "Internacional",
+        "imagem": "https://static.vecteezy.com/system/resources/thumbnails/003/063/722/small_2x/dubai-marina-panorama-photo.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Paris",
+        "Companhia aérea": "Air France",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "11h",
+        "preco": 4300,
+        "Categoria": "Internacional",
+        "imagem": "https://www.viajaquepassa.com.br/wp-content/uploads/2021/02/torre-eiffel-paris.png"
+    },
+    {
+        "id": 3,
+        "titulo": "Nova York",
+        "Companhia aérea": "Delta Airlines",
+        "Classe do voo": "Executiva",
+        "Duração do voo": "10h",
+        "preco": 4800,
+        "Categoria": "Internacional",
+        "imagem": "https://wallpapers.com/images/hd/skyscrapers-new-york-computer-8aap722f1nqma7xo.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Lisboa",
+        "Companhia aérea": "TAP Air Portugal",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "9h",
+        "preco": 3900,
+        "Categoria": "Internacional",
+        "imagem": "https://wallpapers.com/images/hd/pretty-sky-in-lisbon-1odpujjjj3cw1esb.jpg"
+    },
+    {
+        "id": 5,
+        "titulo": "Rio de Janeiro",
+        "Companhia aérea": "LATAM",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "1h",
+        "preco": 450,
+        "Categoria": "Nacional",
+        "imagem": "https://wallpapers.com/images/hd/rio-de-janeiro-botafogo-beach-7pcq8jwe5zfef4uf.jpg"
+    },
+    {
+        "id": 6,
+        "titulo": "Orlando",
+        "Companhia aérea": "American Airlines",
+        "Classe do voo": "Executiva",
+        "Duração do voo": "9h",
+        "preco": 5100,
+        "Categoria": "Internacional",
+        "imagem": "https://images.unsplash.com/photo-1618945372420-2470ece5277c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JsYW5kb3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "id": 7,
+        "titulo": "Buenos Aires",
+        "Companhia aérea": "Aerolineas Argentinas",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "3h",
+        "preco": 1200,
+        "Categoria": "Internacional",
+        "imagem": "https://www.jpmviagens.com.br/wp-content/uploads/2024/02/imagem_2024-02-23_170240420.jpg"
+    },
+    {
+        "id": 8,
+        "titulo": "Tóquio",
+        "Companhia aérea": "Japan Airlines",
+        "Classe do voo": "Primeira Classe",
+        "Duração do voo": "24h",
+        "preco": 8900,
+        "Categoria": "Internacional",
+        "imagem": "https://www.civitatis.com/blog/wp-content/uploads/2022/11/calle-akihabara-tokio.jpg"
+    },
+    {
+        "id": 9,
+        "titulo": "Salvador",
+        "Companhia aérea": "Gol",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "2h",
+        "preco": 650,
+        "Categoria": "Nacional",
+        "imagem": "https://mobilidade.estadao.com.br/wp-content/uploads/2024/12/Imagem-destacada-Mobilidade-2024-12-09T165847.906.jpg.webp"
+    },
+    {
+        "id": 10,
+        "titulo": "Londres",
+        "Companhia aérea": "British Airways",
+        "Classe do voo": "Executiva",
+        "Duração do voo": "11h",
+        "preco": 5400,
+        "Categoria": "Internacional",
+        "imagem": "https://cdn2.civitatis.com/reino-unido/londres/guia/londres-nuit"
+    },
+    {
+        "id": 11,
+        "titulo": "Roma",
+        "Companhia aérea": "ITA Airways",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "10h",
+        "preco": 4200,
+        "Categoria": "Internacional",
+        "imagem": "https://images.squarespace-cdn.com/content/v1/55b7e44de4b0af4724ac5dd6/1700162662971-0Z4FLV14T0J7CYZ3Z66L/pexels-jason-renfrow-photography-13072229.jpg"
+    },
+    {
+        "id": 12,
+        "titulo": "Recife",
+        "Companhia aérea": "Azul",
+        "Classe do voo": "Econômica",
+        "Duração do voo": "3h",
+        "preco": 780,
+        "Categoria": "Nacional",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/89/Rua_do_Bom_Jesus%2C_Recife_antigo.jpg"
+    }
+]

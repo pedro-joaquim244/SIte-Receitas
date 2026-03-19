@@ -1,0 +1,90 @@
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 90vh;
+  padding: 0 80px;
+
+  background-color: #f5e9d8;
+  overflow: hidden;
+  /* ESSENCIAL pra cortar o círculo */
+}
+
+/* LADO ESQUERDO */
+.left {
+  max-width: 520px;
+  z-index: 2;
+}
+
+.left h1 {
+  font-size: 90px;
+  color: #c94f1d;
+  margin-bottom: 20px;
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+}
+
+.left p {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* BOTÃO */
+.left button {
+  padding: 14px 32px;
+  border-radius: 30px;
+
+  border: 2px solid #c94f1d;
+  background: transparent;
+
+  color: #c94f1d;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  background-color: #c94f1d;
+  color: #fff;
+}
+
+/* LADO DIREITO */
+.right {
+  position: relative;
+  width: 520px;
+  height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+/* CÍRCULO VERMELHO (PERFEITO) */
+.curva {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  /* background-color: #a52a2a; */
+  border-radius: 50%;
+  right: -350px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  border: #a52a2a solid 100px;
+  left: 190px;
+  top: 270px;
+}
+
+/* CAROUSEL / PRATOS */
+.right img {
+  position: absolute;
+  z-index: 2;
+}
