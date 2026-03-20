@@ -1,0 +1,13 @@
+#titulo{
+     color: #ce5a2c;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 45px;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.Pratos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* força ficar na mesma linha */
+}

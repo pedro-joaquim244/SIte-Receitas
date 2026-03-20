@@ -6,12 +6,13 @@ import lanche from "../../assets/imagens/lanche.png"
 import doces from "../../assets/imagens/Doces.png"
 import bebidas from "../../assets/imagens/Bebidas.png"
 import ComidaVegana from "../../assets/imagens/ComidaVegana.png"
+import Massas from "../../assets/imagens/macarrão.png"
 export default function Categorias() {
     return (
         <>
 
 
-            <h2 className={style.titulo}>Categorias</h2>
+            <h2 id={style.titulo}>Categorias</h2>
             <div className={style.cards}>
                 <CardCategoria
                     nome="Entradas"
@@ -37,6 +38,11 @@ export default function Categorias() {
                     nome="Entradas"
                     receitas={2}
                     icones={bebidas}
+                />
+                <CardCategoria
+                    nome="Massas"
+                    receitas={10}
+                    icones={Massas}
                 />
 
             </div>
