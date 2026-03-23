@@ -5,8 +5,9 @@ import Risotto from "../../assets/imagens/ristotto.png";
 import Frango from "../../assets/imagens/frango.png"
 export default function Destaques() {
     return (
-        <>
+        <section className={style.container}>
             <h1 id={style.titulo}>Pratos em Destaques</h1>
+
             <div className={style.Pratos}>
                 <PratosDestaques
                     nome="Arroz"
@@ -23,10 +24,7 @@ export default function Destaques() {
                     imagem={Frango}
                     subtitulo="Grelhado"
                 />
-
-
             </div>
-        </>
-
+        </section>
     )
 }

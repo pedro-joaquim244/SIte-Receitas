@@ -3,7 +3,9 @@ import style from "../styles/inicial.module.css"
 import Hero  from '../components/Hero/Hero'
 import Categorias from '../components/Categorias'
 import Destaques from '../components/Destaques'
-
+import Conhecimentos from '../components/Introdução-Mundo'
+import Roleta  from '../components/Roleta'
+import Populares from '../components/Populares'
 
 export default function Inicial() {
     return (
@@ -13,7 +15,9 @@ export default function Inicial() {
         <Hero/>
         <Categorias/>
         <Destaques/>
-
+        <Conhecimentos/>
+        <Roleta/>
+        <Populares/>
         
 
         </>

@@ -14,14 +14,20 @@
     align-items: center;
     padding-top: 60px;
     position: relative;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease,
+        background-color 0.5s ease;
+
+    transition-delay: 0s, 0s, 0.25s;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    background-color: #C94108;
 }
 
 .imageWrapper {
@@ -37,14 +43,12 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* imagem do prato */
 .imageWrapper img {
     height: 300px;
     width: 300px;
     transition: transform 0.4s ease;
 }
 
-/* animação de rotação */
 @keyframes girarPrato {
     from {
         transform: rotate(0deg);
@@ -54,9 +58,8 @@
     }
 }
 
-/* hover para rodar o prato */
 .card:hover .imageWrapper img {
-    animation: girarPrato 0.4s linear;
+    animation: girarPrato 0.6s linear;
 }
 
 .image {
@@ -66,7 +69,6 @@
     border-radius: 50%;
 }
 
-/* container do texto */
 .text {
     position: relative;
     margin-top: 270px;
@@ -74,23 +76,22 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    min-height: 80px; /* garante espaço para os textos */
+    min-height: 80px;
 }
 
-/* título e subtítulo normais */
 .title,
 .subtitle {
     color: white;
-    font-family: "averia serif libre", serif;
-    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     text-align: center;
     transition: opacity 0.4s ease;
     margin: 0;
 }
 
-/* tamanho e peso */
 .title {
     font-size: 34px;
+    font-weight: bold;
 }
 
 .subtitle {
@@ -98,7 +99,6 @@
     font-weight: normal;
 }
 
-/* texto “Ver receita” escondido por padrão */
 .textHover {
     position: absolute;
     top: 50%;
@@ -111,15 +111,20 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
+    text-align: center;
 }
 
-/* hover: título e subtítulo desaparecem */
+/* só a palavra Receita */
+.receita {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
 .card:hover .title,
 .card:hover .subtitle {
     opacity: 0;
 }
 
-/* hover: texto “Ver receita” aparece */
 .card:hover .textHover {
     opacity: 1;
     pointer-events: auto;

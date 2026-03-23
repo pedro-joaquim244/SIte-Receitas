@@ -1,4 +1,12 @@
 /* HERO */
+@font-face {
+    font-family: 'Averia';
+    src: url('../../fonts/AveriaSerifLibre-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+   
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -19,12 +27,15 @@
 }
 
 .left h1 {
+  font-family: 'Averia';
   font-size: 90px;
   color: #c94f1d;
   margin-bottom: 20px;
-  font-family: "Averia Serif Libre", serif;
   font-weight: 700;
+  -webkit-text-stroke: 4px #c94f1d;
 }
+
+
 
 .left p {
   font-size: 17px;

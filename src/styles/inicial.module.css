@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Averia';
+    src: url('../fonts/AveriaSerifLibre-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body{
     background-color: #f5e9d8;
 }

@@ -1,0 +1,86 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TEXTO */
+.text {
+    max-width: 500px;
+}
+
+.title {
+    font-family: "Averia Serif Libre", serif;
+    font-size: 48px;
+    color: #5a1f14;
+    margin-bottom: 20px;
+    -webkit-text-stroke: #5a1f14 2px;
+}
+
+.text p {
+    font-size: 18px;
+    color: #2b2b2b;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* BOTÃO */
+.text a {
+    display: inline-block;
+    background-color: #6b1f12;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.text a {
+   
+    &:hover {
+        transition: 0.4s;
+        transform: scale(1.1);
+
+    }
+}
+
+/* LADO DIREITO */
+.sobreposicao {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+/* CÍRCULO LARANJA (ANEL) */
+.circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 70px solid #a32621;
+    border-radius: 50%;
+
+    right: -243px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* IMAGEM */
+.imagem {
+    position: relative;
+    z-index: 1;
+}
+
+.imagem img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #cfc3af;
+    padding: 20px;
+    margin-top: 32px;
+}

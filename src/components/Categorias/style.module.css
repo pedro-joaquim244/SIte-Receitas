@@ -33,5 +33,6 @@
     font-size: 45px;
     text-align: center;
     margin: 32px 0;
+    -webkit-text-stroke: 2px #ce5a2c;
 
 }

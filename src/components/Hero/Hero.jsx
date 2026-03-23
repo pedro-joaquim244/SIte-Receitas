@@ -7,7 +7,7 @@ export default function Hero() {
       
       {/* LADO ESQUERDO (NÃO ALTERADO) */}
       <div className={styles.left}>
-        <h1>Sálvia.</h1>
+        <h1 className={styles.salvia}>Sálvia.</h1>
 
         <p>
           Aqui você encontra receitas simples, criativas e deliciosas para qualquer
