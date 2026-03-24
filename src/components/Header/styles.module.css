@@ -1,13 +1,22 @@
 .header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 1720px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: #FFF7E9;
-    padding: 12px 24px;
+
+    padding: 16px 32px;
     border-radius: 40px;
 
-    margin: 20px;
+    background-color: #FFF7E9;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1000;
 }
 
 /* LOGO */
@@ -65,7 +74,7 @@
     position: relative;
 }
 
-/* LINHA EMBAIXO (hover igual da imagem) */
+/* LINHA DO HOVER */
 .header nav a::after {
     content: "";
     position: absolute;
@@ -74,7 +83,6 @@
     width: 0%;
     height: 2px;
     background-color: #c94f1d;
-
     transition: 0.3s ease;
 }
 
