@@ -6,6 +6,7 @@ import Destaques from '../components/Destaques'
 import Conhecimentos from '../components/Introdução-Mundo'
 import Roleta  from '../components/Roleta'
 import Populares from '../components/Populares'
+import Footer from '../components/Footer'
 
 export default function Inicial() {
     return (
@@ -18,7 +19,7 @@ export default function Inicial() {
         <Conhecimentos/>
         <Roleta/>
         <Populares/>
-        
+        <Footer/>
 
         </>
     )

@@ -1,4 +1,53 @@
-.pratos{
-    display: flex;
-    justify-content: space-around;
+.populares {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 40px 60px 80px 140px;
+  box-sizing: border-box;
+}
+
+.circulo {
+  position: absolute;
+  left: -180px;
+  top: 20px;
+  width: 360px;
+  height: 360px;
+  border: 42px solid #d94f04;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.topo {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+
+.topo h4 {
+  font-size: 2rem;
+  color: #d94f04;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+}
+
+.topo h3 {
+  font-size: 4rem;
+  color: #d94f04;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.pratos {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }

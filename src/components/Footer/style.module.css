@@ -1,0 +1,99 @@
+.footer {
+  width: 100%;
+  background: rgb(201, 79, 29);
+  color: white;
+  margin-top: 50px;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+/* container principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 100px;
+}
+
+/* títulos */
+.container h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+/* explore */
+.explore {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.explore a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.explore a:hover {
+  opacity: 0.8;
+}
+
+/* redes sociais */
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+}
+
+/* contato */
+.contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contato p {
+  font-size: 17px;
+}
+
+/* barra inferior */
+.copy {
+  background: #531906;
+  padding: 20px;
+}
+
+/* conteúdo central */
+.copyContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ícone redondo */
+.icone {
+  width: 50px;
+  height: 50px;
+  background: #f5e6d8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7a1f00;
+  font-size: 20px;
+}
+
+/* texto copyright */
+.copyContent span {
+  font-size: 16px;
+}
