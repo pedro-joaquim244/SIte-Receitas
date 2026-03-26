@@ -34,30 +34,34 @@
 }
 
 .explore a {
-  position: relative;
-  display: inline-block; 
+  display: inline-block;
+  width: fit-content;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  line-height: 1.2;
+  font-family: "montserrat";
+  font-weight: 400;
 }
 
-/* linha escondida */
 .explore a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
-
-  width: 0%;
+  bottom: -2px;
+  width: 100%;
   height: 2px;
-  background: white;
+  background-color: #ffffff;
 
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-/* hover */
 .explore a:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 /* redes sociais */
@@ -71,7 +75,35 @@
   display: flex;
   align-items: center;
   gap: 10px;
+cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+  color: #ffffff;
   font-size: 17px;
+  font-weight: 500;
+font-family: "montserrat";
+  font-weight: 400;
+  position: relative;
+  line-height: 1.2;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.item:hover::after {
+  transform: scaleX(1);
 }
 
 /* contato */
@@ -79,10 +111,38 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  font-family: "montserrat";
+  font-weight: 400;
 }
 
+/* 🔥 AGORA CONTATO TEM HOVER */
 .contato p {
+  display: inline-block;
+  width: fit-content;
+cursor: pointer;
   font-size: 17px;
+  position: relative;
+}
+
+/* linha */
+.contato p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* hover */
+.contato p:hover::after {
+  transform: scaleX(1);
 }
 
 /* barra inferior */
@@ -97,7 +157,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -114,17 +174,15 @@
   font-size: 20px;
 }
 
-/* texto copyright */
 .copyContent span {
   font-size: 16px;
 }
 
-/* ajuste fino no svg */
 .svg {
   margin-top: 2px;
 }
 
-/* 🔥 RESPONSIVO */
+/* responsivo */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -134,5 +192,9 @@
 
   .item {
     justify-content: center;
+  }
+
+  .explore {
+    align-items: center;
   }
 }

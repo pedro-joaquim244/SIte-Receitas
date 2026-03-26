@@ -36,3 +36,29 @@
     -webkit-text-stroke: 2px #ce5a2c;
 
 }
+/* estado inicial escondido */
+.tituloAnimado,
+.cards,
+.botaoAnimado {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+/* quando aparecer */
+.aparecer .tituloAnimado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aparecer .cards {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.aparecer .botaoAnimado {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}

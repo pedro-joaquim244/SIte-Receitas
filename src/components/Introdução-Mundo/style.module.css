@@ -67,6 +67,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
+    
 }
 
 
@@ -74,6 +75,16 @@
 .imagem {
     position: relative;
     z-index: 1;
+    
+}
+
+@keyframes girarPrato {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .imagem img {
@@ -84,4 +95,5 @@
     background-color: #cfc3af;
     padding: 20px;
     margin-top: 32px;
+    animation: girarPrato 30s linear infinite;
 }
