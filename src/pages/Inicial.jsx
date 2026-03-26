@@ -20,7 +20,6 @@ export default function Inicial() {
         <Conhecimentos/>
         <Roleta/>
         <Populares/>
-        <PratosIngredientes/>
         <Footer/>
 
         </>

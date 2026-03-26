@@ -4,8 +4,8 @@
   color: white;
   margin-top: 50px;
 
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@
 .explore {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .explore a {
@@ -78,7 +78,7 @@
 .contato {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .contato p {
