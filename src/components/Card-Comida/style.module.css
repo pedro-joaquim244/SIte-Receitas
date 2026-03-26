@@ -1,0 +1,65 @@
+.card {
+  width: 280px;
+  height: 105px;
+  background-color: #d4550a;
+  border-radius: 35px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.45s ease;
+}
+
+/* nome do prato */
+.nome {
+  color: #f8e7d2;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0;
+  transition: all 0.45s ease;
+}
+
+/* imagem */
+.imagem {
+  position: absolute;
+  left: 20px;              /* 🔥 mais afastado da borda */
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px) scale(0.9);
+
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+
+  opacity: 0;
+  transition: all 0.45s ease;
+}
+
+/* hover */
+.card:hover {
+  width: 367px;
+  height: 110px;
+  background-color: #7a230c;
+
+  justify-content: flex-start;
+
+  padding-left: 115px;     /* 🔥 MAIS ESPAÇO ENTRE IMAGEM E TEXTO */
+  padding-right: 20px;
+}
+
+/* imagem aparece */
+.card:hover .imagem {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* texto ajustado */
+.card:hover .nome {
+  text-align: left;
+  font-size: 25px;         /* 🔥 mais equilibrado */
+}

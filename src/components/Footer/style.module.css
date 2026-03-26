@@ -4,6 +4,9 @@
   color: white;
   margin-top: 50px;
 
+  position: relative;   /* 🔥 ESSENCIAL */
+  z-index: 999;         /* 🔥 fica acima dos círculos */
+
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   overflow: hidden;
@@ -17,6 +20,9 @@
   padding: 60px 100px;
   flex-wrap: wrap;
   gap: 40px;
+
+  position: relative;
+  z-index: 2; /* 🔥 acima dos círculos */
 }
 
 /* títulos */
@@ -39,11 +45,10 @@
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
   line-height: 1.2;
   font-family: "montserrat";
-  font-weight: 400;
 }
 
 .explore a::after {
@@ -75,13 +80,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-cursor: pointer;
+  cursor: pointer;
+
   width: fit-content;
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  font-weight: 500;
-font-family: "montserrat";
+  font-family: "montserrat";
   font-weight: 400;
   position: relative;
   line-height: 1.2;
@@ -115,16 +120,15 @@ font-family: "montserrat";
   font-weight: 400;
 }
 
-/* 🔥 AGORA CONTATO TEM HOVER */
 .contato p {
   display: inline-block;
   width: fit-content;
-cursor: pointer;
+  cursor: pointer;
   font-size: 17px;
   position: relative;
 }
 
-/* linha */
+/* linha hover */
 .contato p::after {
   content: "";
   position: absolute;
@@ -140,7 +144,6 @@ cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* hover */
 .contato p:hover::after {
   transform: scaleX(1);
 }
@@ -149,6 +152,9 @@ cursor: pointer;
 .copy {
   background: #531906;
   padding: 20px;
+
+  position: relative;
+  z-index: 2;
 }
 
 /* conteúdo central */
@@ -161,7 +167,7 @@ cursor: pointer;
   text-align: center;
 }
 
-/* ícone redondo */
+/* ícone */
 .icone {
   width: 50px;
   height: 50px;
@@ -197,4 +203,12 @@ cursor: pointer;
   .explore {
     align-items: center;
   }
+}
+
+/* 🔥 GARANTIA FINAL: círculos SEMPRE atrás */
+.circulo,
+.circuloDireita {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
 }

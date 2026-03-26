@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    position: relative;
+    /* contexto dos círculos */
+    z-index: 1;
+    
+    overflow: hidden;
+
+}
+
+/* fileiras */
+.fileira {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    position: relative;
+    z-index: 2;
+    /* fica acima dos círculos */
+}
+
+/* subtítulo */
+.subtitle {
+    font-family: 'Averia';
+    font-size: 28px;
+    color: #c94f1d;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #c94f1d;
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* círculo ESQUERDA */
+.circulo {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 70px solid #7a2500;
+    border-radius: 50%;
+
+    left: -204px;
+    top: 37%;
+    transform: translateY(-50%);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* círculo DIREITA */
+.circuloDireita {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 70px solid #7a2500;
+    border-radius: 86%;
+    right: -204px;
+    top: 67%;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
