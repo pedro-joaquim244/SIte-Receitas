@@ -28,14 +28,12 @@
 /* imagem */
 .imagem {
   position: absolute;
-  left: 20px;              /* 🔥 mais afastado da borda */
+  left: 20px;
   top: 50%;
   transform: translateY(-50%) translateX(-20px) scale(0.9);
-
   width: 80px;
   height: 80px;
-  object-fit: contain;
-
+  object-fit: cover;
   opacity: 0;
   transition: all 0.45s ease;
 }
@@ -48,7 +46,8 @@
 
   justify-content: flex-start;
 
-  padding-left: 115px;     /* 🔥 MAIS ESPAÇO ENTRE IMAGEM E TEXTO */
+  padding-left: 115px;
+  /* 🔥 MAIS ESPAÇO ENTRE IMAGEM E TEXTO */
   padding-right: 20px;
 }
 
@@ -61,5 +60,6 @@
 /* texto ajustado */
 .card:hover .nome {
   text-align: left;
-  font-size: 25px;         /* 🔥 mais equilibrado */
+  font-size: 25px;
+  /* 🔥 mais equilibrado */
 }

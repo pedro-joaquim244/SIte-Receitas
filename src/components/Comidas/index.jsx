@@ -8,12 +8,16 @@ import Grelhado from "../../assets/imagens/Grelhado.png";
 import Estrogonofe from "../../assets/imagens/Estrogonofe-frango.png";
 import Frango from "../../assets/imagens/Frango-assado.png";
 import FrangoVagem from "../../assets/imagens/frango-vagem.jpg";
+import Yaksoba from "../../assets/imagens/yaksoba.png";
+import Panqueca from "../../assets/imagens/panqueca.png";
+import Escondidinho from "../../assets/imagens/escondidinho.png";
+import Molho from "../../assets/imagens/molho-madeira.png00000000000000000000000000000000000000000000000";
 
 
 export default function Comidas() {
   return (
     <div className={style.container}>
-      
+
       {/* círculos decorativos */}
       <div className={style.circulo}></div>
       <div className={style.circuloDireita}></div>
@@ -36,10 +40,10 @@ export default function Comidas() {
 
       <h2 className={style.subtitle}>Pratos rápidos</h2>
       <div className={style.fileira}>
-        <Carne nome="Bife acebolado" imagem={Bife} />
-        <Carne nome="Bife acebolado" imagem={Bife} />
-        <Carne nome="Bife acebolado" imagem={Bife} />
-        <Carne nome="Bife acebolado" imagem={Bife} />
+        <Carne nome="Yaksoba" imagem={Yaksoba} />
+        <Carne nome="Panqueca" imagem={Panqueca} />
+        <Carne nome="Escondidinho" imagem={Escondidinho} />
+        <Carne nome="Moela á madeira" imagem={Molho} />
       </div>
 
     </div>

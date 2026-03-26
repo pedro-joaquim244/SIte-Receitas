@@ -15,7 +15,7 @@
 .fileira {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     position: relative;
     z-index: 2;
