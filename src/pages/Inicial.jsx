@@ -7,6 +7,7 @@ import Conhecimentos from '../components/Introdução-Mundo'
 import Roleta  from '../components/Roleta'
 import Populares from '../components/Populares'
 import Footer from '../components/Footer'
+import PratosIngredientes from "../components/Pratos-Ingredientes"
 
 export default function Inicial() {
     return (
@@ -19,6 +20,7 @@ export default function Inicial() {
         <Conhecimentos/>
         <Roleta/>
         <Populares/>
+        <PratosIngredientes/>
         <Footer/>
 
         </>

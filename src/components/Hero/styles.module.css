@@ -1,10 +1,10 @@
 /* HERO */
 @font-face {
-    font-family: 'Averia';
-    src: url('../../fonts/AveriaSerifLibre-Bold.ttf');
-    font-weight: bold;
-    font-style: normal;
-   
+  font-family: 'Averia';
+  src: url('../../fonts/AveriaSerifLibre-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+
 }
 
 .hero {
@@ -28,7 +28,7 @@
 
 .left h1 {
   font-family: 'Averia';
-  font-size: 90px;
+  font-size: 154px;
   color: #c94f1d;
   margin-bottom: 20px;
   font-weight: 700;
@@ -38,10 +38,11 @@
 
 
 .left p {
-  font-size: 17px;
+  font-size: 20px;
   color: #333;
   line-height: 1.7;
   margin-bottom: 30px;
+  width: 842px;
 }
 
 /* BOTÃO */

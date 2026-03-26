@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+}
+
+.prato {
+  width: 100%;
+  display: block;
+}
+
+/* ingredientes escondidos */
+.ingrediente {
+  position: absolute;
+  width: 90px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* posições */
+.folha1 {
+  top: 10px;
+  left: 10px;
+}
+
+.folha2 {
+  top: 10px;
+  right: 10px;
+}
+
+.camarao1 {
+  bottom: 10px;
+  left: 10px;
+}
+
+.camarao2 {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* HOVER */
+.card:hover .ingrediente {
+  opacity: 1;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

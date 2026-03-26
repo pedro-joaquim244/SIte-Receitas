@@ -5,6 +5,7 @@
     padding: 60px 80px;
     position: relative;
     overflow: hidden;
+    height: 603px;
 }
 
 /* TEXTO */
@@ -40,7 +41,7 @@
 }
 
 .text a {
-   
+
     &:hover {
         transition: 0.4s;
         transform: scale(1.1);
@@ -58,16 +59,16 @@
 /* CÍRCULO LARANJA (ANEL) */
 .circle {
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
     border: 70px solid #a32621;
     border-radius: 50%;
-
-    right: -243px;
+    right: -325px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
 }
+
 
 /* IMAGEM */
 .imagem {

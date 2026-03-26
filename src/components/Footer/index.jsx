@@ -19,15 +19,15 @@ export default function Footer() {
           <h2>Siga-nós :</h2>
 
           <div className={style.item}>
-            <FaTwitter /> <span>@salvia</span>
+            <FaTwitter className={style.svg} /> <span>@salvia</span>
           </div>
 
           <div className={style.item}>
-            <FaInstagram /> <span>@salvia</span>
+            <FaInstagram className={style.svg} /> <span>@salvia</span>
           </div>
 
           <div className={style.item}>
-            <FaFacebook /> <span>@salvia</span>
+            <FaFacebook className={style.svg} /> <span>@salvia</span>
           </div>
         </div>
 

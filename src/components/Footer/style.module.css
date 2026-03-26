@@ -13,7 +13,10 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 60px 100px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 /* títulos */
@@ -31,14 +34,30 @@
 }
 
 .explore a {
+  position: relative;
+  display: inline-block; 
   text-decoration: none;
   color: white;
   font-size: 17px;
-  transition: 0.3s;
 }
 
-.explore a:hover {
-  opacity: 0.8;
+/* linha escondida */
+.explore a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 0%;
+  height: 2px;
+  background: white;
+
+  transition: width 0.3s ease;
+}
+
+/* hover */
+.explore a:hover::after {
+  width: 100%;
 }
 
 /* redes sociais */
@@ -78,6 +97,8 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap; 
+  text-align: center;
 }
 
 /* ícone redondo */
@@ -96,4 +117,22 @@
 /* texto copyright */
 .copyContent span {
   font-size: 16px;
+}
+
+/* ajuste fino no svg */
+.svg {
+  margin-top: 2px;
+}
+
+/* 🔥 RESPONSIVO */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .item {
+    justify-content: center;
+  }
 }

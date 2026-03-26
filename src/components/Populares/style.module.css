@@ -1,20 +1,21 @@
 .populares {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   overflow: hidden;
   padding: 40px 60px 80px 140px;
   box-sizing: border-box;
 }
 
 .circulo {
+  content: "";
   position: absolute;
-  left: -180px;
-  top: 20px;
-  width: 360px;
-  height: 360px;
-  border: 42px solid #d94f04;
+  width: 600px;
+  height: 600px;
+  border: 70px solid #ce5a2c;
   border-radius: 50%;
+  left: -265px;
+  top: 53%;
+  transform: translateY(-50%);
   z-index: 0;
 }
 
@@ -22,6 +23,10 @@
   position: relative;
   z-index: 2;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .topo h4 {

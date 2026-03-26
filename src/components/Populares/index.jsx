@@ -18,11 +18,11 @@ export default function Populares() {
             <div className={style.pratos}>
                 <Pratos nome="Camarão com manga"
                     prato={imagem1} />
-                <Pratos nome="Macarrão à Bolonhesa"
+                <Pratos nome="Macarrão com vagem"
                     prato={imagem2} />
-                <Pratos nome="Macarrão à Bolonhesa"
+                <Pratos nome="Tender na panela"
                     prato={imagem3} />
-                <Pratos nome="Macarrão à Bolonhesa"
+                <Pratos nome="Carne de panela apimentada"
                     prato={imagem4} />
             </div>
         </section>
