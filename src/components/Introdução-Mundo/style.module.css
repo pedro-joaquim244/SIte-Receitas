@@ -22,10 +22,11 @@
 }
 
 .text p {
-    font-size: 18px;
-    color: #2b2b2b;
-    margin-bottom: 25px;
-    line-height: 1.4;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    width: 842px;
 }
 
 /* BOTÃO */
@@ -67,7 +68,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
-    
+
 }
 
 
@@ -75,25 +76,26 @@
 .imagem {
     position: relative;
     z-index: 1;
-    
+
 }
 
 @keyframes girarPrato {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
 .imagem img {
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
     background-color: #cfc3af;
     padding: 20px;
-    margin-top: 32px;
+    margin-top: -5px;
     animation: girarPrato 30s linear infinite;
 }
