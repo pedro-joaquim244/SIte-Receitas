@@ -4,7 +4,8 @@
         "titulo": "Arroz Chawal",
         "Tempo de preparo": "1 hora",
         "Categoria": "Destaques",
-        "imagem": "/imagens/Arroz.png"
+        "imagem": "/imagens/Arroz.png",
+        "Pais originario":"Grecia"
     },
     {
         "id": 2,

@@ -111,7 +111,7 @@ export default function Roleta() {
         </div>
 
         <div className={styles.texto}>
-          <h1>Está com dúvida da sua próxima receita?</h1>
+          <h1>Está com dúvida na sua próxima receita?</h1>
           <p>
             Gire a roleta e descubra categoria diferente para você sair do
             padrão!

@@ -6,7 +6,7 @@
     position: relative;
     /* contexto dos círculos */
     z-index: 1;
-    
+
     overflow: hidden;
 
 }
@@ -19,7 +19,8 @@
 
     position: relative;
     z-index: 2;
-    /* fica acima dos círculos */
+    margin-bottom: 20px ;
+
 }
 
 /* subtítulo */
@@ -30,7 +31,7 @@
     font-weight: 700;
     -webkit-text-stroke: 1px #c94f1d;
     text-align: center;
-
+    margin-top: 8px;
     position: relative;
     z-index: 2;
 }

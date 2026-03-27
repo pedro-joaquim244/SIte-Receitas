@@ -22,12 +22,12 @@
 /* ÁREA DA ROLETA */
 .roletaArea {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 520px;
+  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* INDICADOR */
@@ -74,6 +74,7 @@
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   font-family: 'Montserrat', sans-serif;
 }
+
 /* CENTRO */
 .centro {
   position: absolute;
@@ -95,8 +96,8 @@
 }
 
 .texto h1 {
-  margin: 0 0 20px;
-  font-size: 40px;
+ margin-bottom:  31px;
+  font-size: 48px;
   line-height: 1.12;
   font-weight: 700;
   color: #cc4a00;
@@ -105,11 +106,11 @@
 }
 
 .texto p {
-font-size: 20px;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 30px;
-    width: 500px;
+  font-size: 23px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  width: 500px;
 }
 
 /* BOTÃO */
@@ -175,10 +176,10 @@ font-size: 20px;
   margin: 0 0 16px;
   font-size: 28px;
   color: #cc4a00;
-font-family: "averia serif libre", serif;
-font-weight: bolder;
--webkit-text-stroke-color: #c94f1d ;
--webkit-text-stroke-width: 2px;
+  font-family: "averia serif libre", serif;
+  font-weight: bolder;
+  -webkit-text-stroke-color: #c94f1d;
+  -webkit-text-stroke-width: 2px;
 }
 
 .modal p {
