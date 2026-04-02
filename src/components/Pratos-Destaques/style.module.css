@@ -4,6 +4,18 @@
     align-items: center;
 }
 
+/* CONTAINER DOS CARDS */
+.cards {
+    display: flex;
+    flex-direction: column; /* 🔥 EMPILHADO */
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+
+}
+
+/* CARD */
 .card {
     background-color: #b92c2c;
     width: 236px;
@@ -15,9 +27,10 @@
     padding-top: 60px;
     position: relative;
     cursor: pointer;
+    overflow: visible;
 
-    transition: 
-        transform 0.3s ease, 
+    transition:
+        transform 0.3s ease,
         box-shadow 0.3s ease,
         background-color 0.5s ease;
 
@@ -26,10 +39,11 @@
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.25);
     background-color: #C94108;
 }
 
+/* IMAGEM */
 .imageWrapper {
     position: absolute;
     top: 20px;
@@ -44,8 +58,8 @@
 }
 
 .imageWrapper img {
-    height: 300px;
     width: 300px;
+    height: 300px;
     transition: transform 0.4s ease;
 }
 
@@ -69,6 +83,7 @@
     border-radius: 50%;
 }
 
+/* TEXTO */
 .text {
     position: relative;
     margin-top: 270px;
@@ -105,16 +120,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: "averia serif libre", serif;
+    font-family: "Averia Serif Libre", serif;
     font-size: 28px;
     font-weight: bold;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
     text-align: center;
+    width: 100%;
 }
 
-/* só a palavra Receita */
 .receita {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -128,4 +143,202 @@
 .card:hover .textHover {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* CÍRCULO DECORATIVO */
+.curva {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: #a52a2a solid 70px;
+    right: -220px;
+    top: 58%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* TÍTULO */
+#titulo {
+    color: #ce5a2c;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 45px;
+    text-align: center;
+    margin: 32px 0 50px;
+    -webkit-text-stroke: 2px #ce5a2c;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   RESPONSIVO TABLET
+========================= */
+@media (max-width: 900px) {
+    .card {
+        width: 420px;
+        height: 180px;
+        border-radius: 32px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 24px 20px 150px;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .imageWrapper {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 170px;
+        height: 170px;
+    }
+
+    .imageWrapper img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .text {
+        margin-top: 0;
+        margin-left: 20px;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .title,
+    .subtitle {
+        text-align: left;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .textHover {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        text-align: left;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .curva {
+        width: 300px;
+        height: 300px;
+        border-width: 50px;
+        right: -170px;
+        top: 72%;
+    }
+
+    #titulo {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+}
+
+/* =========================
+   RESPONSIVO CELULAR
+========================= */
+@media (max-width: 550px) {
+    .card {
+        width: 320px;
+        height: 145px;
+        border-radius: 26px;
+        padding: 18px 18px 18px 115px;
+    }
+
+    .imageWrapper {
+        left: -10px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .imageWrapper img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .textHover {
+        font-size: 20px;
+    }
+
+    .curva {
+        width: 220px;
+        height: 220px;
+        border-width: 36px;
+        right: -130px;
+        top: 78%;
+    }
+
+    #titulo {
+        font-size: 30px;
+        margin-bottom: 32px;
+        -webkit-text-stroke: 1px #ce5a2c;
+    }
+}
+
+/* =========================
+   RESPONSIVO MUITO PEQUENO
+========================= */
+@media (max-width: 380px) {
+    .card {
+        width: 280px;
+        height: 130px;
+        padding: 16px 16px 16px 98px;
+        border-radius: 22px;
+    }
+
+    .imageWrapper {
+        width: 110px;
+        height: 110px;
+        left: -8px;
+    }
+
+    .imageWrapper img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .textHover {
+        font-size: 18px;
+    }
+
+    .curva {
+        width: 180px;
+        height: 180px;
+        border-width: 28px;
+        right: -110px;
+        top: 82%;
+    }
+
+    #titulo {
+        font-size: 26px;
+    }
 }

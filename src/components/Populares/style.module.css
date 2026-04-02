@@ -7,7 +7,6 @@
 }
 
 .circulo {
-  content: "";
   position: absolute;
   width: 550px;
   height: 550px;
@@ -27,6 +26,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .topo h4 {
@@ -49,10 +49,102 @@
 .pratos {
   position: relative;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 70px;
-  flex-wrap: wrap;
   margin-top: 30px;
+}
+
+/* =========================
+   RESPONSIVO 1000px
+========================= */
+@media (max-width: 1000px) {
+  .populares {
+    padding: 40px 30px 70px;
+  }
+
+  .topo h4 {
+    font-size: 1.8rem;
+  }
+
+  .topo h3 {
+    font-size: 3.2rem;
+  }
+
+  .pratos {
+    gap: 40px;
+  }
+
+  .prato {
+    width: 280px;
+    height: 320px;
+  }
+
+  .imagem {
+    width: 280px;
+    height: 280px;
+  }
+
+  .texto h1 {
+    font-size: 22px;
+  }
+
+  .texto span {
+    font-size: 14px;
+  }
+    .pratos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* =========================
+   RESPONSIVO 850px
+========================= */
+@media (max-width: 850px) {
+  .populares {
+    padding: 35px 20px 60px;
+  }
+
+  .circulo {
+    display: none;
+  }
+
+  .topo h4 {
+    font-size: 1.5rem;
+  }
+
+  .topo h3 {
+    font-size: 2.5rem;
+  }
+
+
+}
+
+/* =========================
+   RESPONSIVO 450px
+========================= */
+@media (max-width: 450px) {
+  .populares {
+    padding: 30px 14px 50px;
+  }
+
+  .topo {
+    margin-bottom: 28px;
+  }
+
+  .topo h4 {
+    font-size: 1.2rem;
+  }
+
+  .topo h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .pratos {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }

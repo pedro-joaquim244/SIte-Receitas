@@ -4,11 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 100px;
     padding: 80px 60px;
     overflow: hidden;
     margin-top: 56px;
-
 }
 
 .left {
@@ -20,12 +19,12 @@
 }
 
 .left h1 {
-     font-family: 'Averia';
-  font-size: 120px;
-  color: #c94f1d;
-  margin-bottom: 20px;
-  font-weight: 700;
-  -webkit-text-stroke: 4px #c94f1d;
+    font-family: "Averia Serif Libre", serif;
+    font-size: 120px;
+    color: #c94f1d;
+    margin-bottom: 20px;
+    font-weight: 700;
+    -webkit-text-stroke: 4px #c94f1d;
 }
 
 .left h5 {
@@ -37,11 +36,11 @@
 }
 
 .left p {
-  font-size: 20px;
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  width: 842px;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 842px;
 }
 
 .right {
@@ -52,6 +51,7 @@
     position: relative;
 }
 
+/* mais afastado e estático */
 .efeitoSeparacao {
     position: relative;
     width: 420px;
@@ -60,6 +60,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 40px;
 }
 
 /* imagens base */
@@ -78,49 +79,34 @@
 /* imagem normal */
 .imagem1 {
     opacity: 1;
-    transform: translateY(0) rotate(8deg) scale(1);
+    transform: translateY(0) rotate(0deg) scale(1);
     z-index: 2;
 }
 
 /* imagem separada começa escondida */
 .imagem2 {
     opacity: 0;
-    transform: translateY(30px) rotate(12deg) scale(0.96);
+    transform: translateY(20px) rotate(0deg) scale(0.96);
     z-index: 3;
 }
 
 /* hover */
 .efeitoSeparacao:hover .imagem1 {
     opacity: 0;
-    transform: translateY(-20px) rotate(4deg) scale(0.95);
+    transform: translateY(-10px) rotate(0deg) scale(0.95);
 }
 
 .efeitoSeparacao:hover .imagem2 {
     opacity: 1;
-    transform: translateY(0) rotate(8deg) scale(1);
-}
-
-/* efeito flutuando suave */
-.efeitoSeparacao {
-    animation: flutuar 3s ease-in-out infinite;
-}
-
-@keyframes flutuar {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    transform: translateY(0) rotate(0deg) scale(1);
 }
 
 /* responsivo */
 @media (max-width: 1200px) {
+    .content {
+        gap: 70px;
+    }
+
     .left h1 {
         font-size: 76px;
     }
@@ -136,6 +122,7 @@
     .efeitoSeparacao {
         width: 340px;
         height: 340px;
+        margin-left: 20px;
     }
 
     .imagem1,
@@ -149,6 +136,7 @@
         flex-direction: column;
         text-align: center;
         padding: 60px 30px;
+        gap: 40px;
     }
 
     .left,
@@ -176,6 +164,7 @@
     .efeitoSeparacao {
         width: 300px;
         height: 300px;
+        margin-left: 0;
     }
 
     .imagem1,

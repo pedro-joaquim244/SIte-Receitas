@@ -11,7 +11,6 @@
 .container {
     position: relative;
     overflow: hidden;
-    height: 76vh;
 
 }
 
@@ -27,6 +26,11 @@
     top: 49%;
     transform: translateY(-50%);
     z-index: 0;
+    @media(max-width: 590px){
+        width: 200px;
+        height: 200px;
+        left: -200px;
+    }
 }
 
 /* garante que o conteúdo fique na frente */
@@ -40,4 +44,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    @media(max-width: 900px){
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 17px;
+    }
 }

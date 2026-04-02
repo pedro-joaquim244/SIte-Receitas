@@ -1,42 +1,121 @@
-.cards {
-    display: flex;
-    flex-direction: row;
-    gap: 57px;
-    justify-content: center;
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 60px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
+.left {
+  width: 50%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.salvia {
+  color: #ce5a2c;
+  font-family: "Averia Serif Libre", serif;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  -webkit-text-stroke: 2px #ce5a2c;
+}
+
+.left p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 580px;
+}
+
+.left button {
+  color: white;
+  background-color: #ce5a2c;
+  border: none;
+  text-decoration: none;
+  padding: 18px 32px;
+  border-radius: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.left button:hover {
+  transform: scale(1.08);
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.curva {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background: #f6d6c9;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.right > *:not(.curva) {
+  position: relative;
+  z-index: 1;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
 .button {
-    color: white;
-    background-color: #ce5a2c;
-    text-decoration: none;
-    padding: 20px;
-    border-radius: 32px;
-    font-family: "montserrat", sans-serif;
-    font-weight: 600;
-    display: block;
-    width: fit-content;
-    margin: 32px auto;
-
-    &:hover {
-        transition: 0.4s;
-        transform: scale(1.1);
-
-    }
+  color: white;
+  background-color: #ce5a2c;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  display: block;
+  width: fit-content;
+  margin: 32px auto;
+  transition: 0.4s;
 }
 
-#titulo{
-    
-    color: #ce5a2c;
-    font-family: "Averia Serif Libre", serif;
-    font-size: 45px;
-    text-align: center;
-    margin: 32px 0;
-    -webkit-text-stroke: 2px #ce5a2c;
-
+.button:hover {
+  transform: scale(1.1);
 }
-/* estado inicial escondido */
+
+#titulo {
+  color: #ce5a2c;
+  font-family: "Averia Serif Libre", serif;
+  font-size: 45px;
+  text-align: center;
+  margin: 32px 0;
+  -webkit-text-stroke: 2px #ce5a2c;
+}
+
+/* animações */
 .tituloAnimado,
 .cards,
 .botaoAnimado {
@@ -45,7 +124,6 @@
   transition: all 0.8s ease;
 }
 
-/* quando aparecer */
 .aparecer .tituloAnimado {
   opacity: 1;
   transform: translateY(0);
@@ -61,4 +139,125 @@
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.4s;
+}
+
+/* =========================
+   RESPONSIVO 850px
+========================= */
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 24px;
+    min-height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .left {
+    align-items: center;
+  }
+
+  .salvia {
+    font-size: 72px;
+  }
+
+  .left p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .left button {
+    margin: 0 auto;
+  }
+
+  .right {
+    min-height: 360px;
+  }
+
+  .curva {
+    width: 380px;
+    height: 380px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .button {
+    padding: 18px 24px;
+    font-size: 15px;
+  }
+
+  #titulo {
+    font-size: 36px;
+    -webkit-text-stroke: 1.5px #ce5a2c;
+  }
+}
+
+/* =========================
+   RESPONSIVO 450px
+========================= */
+@media (max-width: 450px) {
+  .hero {
+    padding: 35px 16px;
+    gap: 28px;
+  }
+
+  .salvia {
+    font-size: 52px;
+    -webkit-text-stroke: 1px #ce5a2c;
+  }
+
+  .left p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .left button {
+    padding: 14px 24px;
+    font-size: 14px;
+    border-radius: 26px;
+  }
+
+  .right {
+    min-height: 280px;
+  }
+
+  .curva {
+    width: 270px;
+    height: 270px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .button {
+    padding: 14px 20px;
+    font-size: 14px;
+    margin: 24px auto;
+  }
+
+  #titulo {
+    font-size: 28px;
+    margin: 24px 0;
+    -webkit-text-stroke: 1px #ce5a2c;
+  }
+
+  .tituloAnimado,
+  .cards,
+  .botaoAnimado {
+    transform: translateY(50px);
+  }
 }

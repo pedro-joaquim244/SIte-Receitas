@@ -5,12 +5,15 @@
     padding: 60px 80px;
     position: relative;
     overflow: hidden;
-    height: 603px;
+    min-height: 603px;
+    gap: 40px;
 }
 
 /* TEXTO */
 .text {
     max-width: 500px;
+    position: relative;
+    z-index: 2;
 }
 
 .title {
@@ -19,6 +22,7 @@
     color: #5a1f14;
     margin-bottom: 20px;
     -webkit-text-stroke: #5a1f14 2px;
+    line-height: 1.1;
 }
 
 .text p {
@@ -26,7 +30,7 @@
     color: #333;
     line-height: 1.7;
     margin-bottom: 30px;
-    width: 842px;
+    max-width: 842px;
 }
 
 /* BOTÃO */
@@ -41,13 +45,8 @@
     transition: 0.3s;
 }
 
-.text a {
-
-    &:hover {
-        transition: 0.4s;
-        transform: scale(1.1);
-
-    }
+.text a:hover {
+    transform: scale(1.1);
 }
 
 /* LADO DIREITO */
@@ -55,9 +54,10 @@
     position: relative;
     width: 400px;
     height: 400px;
+    flex-shrink: 0;
 }
 
-/* CÍRCULO LARANJA (ANEL) */
+/* CÍRCULO */
 .circle {
     position: absolute;
     width: 600px;
@@ -68,22 +68,18 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
-
 }
-
 
 /* IMAGEM */
 .imagem {
     position: relative;
     z-index: 1;
-
 }
 
 @keyframes girarPrato {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -98,4 +94,133 @@
     padding: 20px;
     margin-top: -5px;
     animation: girarPrato 30s linear infinite;
+}
+
+/* =========================
+   🔥 REMOVE CÍRCULO EM 905px
+========================= */
+@media (max-width: 905px) {
+    .circle {
+        display: none;
+    }
+}
+
+/* =========================
+   RESPONSIVO 900px
+========================= */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px 30px;
+        min-height: auto;
+        gap: 30px;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 38px;
+        -webkit-text-stroke: #5a1f14 1px;
+    }
+
+    .text p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .sobreposicao {
+        width: 320px;
+        height: 320px;
+    }
+
+    .imagem img {
+        width: 320px;
+        height: 320px;
+        padding: 16px;
+        /* 🔥 continua rodando */
+    }
+}
+
+/* =========================
+   RESPONSIVO 650px
+========================= */
+@media (max-width: 650px) {
+    .content {
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .text p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .text a {
+        font-size: 16px;
+        padding: 11px 24px;
+    }
+
+    .sobreposicao {
+        width: 260px;
+        height: 260px;
+    }
+
+    .imagem img {
+        width: 260px;
+        height: 260px;
+        padding: 14px;
+    }
+}
+
+/* =========================
+   RESPONSIVO 450px
+========================= */
+@media (max-width: 450px) {
+    .content {
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-bottom: 14px;
+        -webkit-text-stroke: #5a1f14 1px;
+    }
+
+    .text p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .text a {
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 22px;
+    }
+
+    .sobreposicao {
+        width: 220px;
+        height: 220px;
+    }
+
+    .imagem img {
+        width: 220px;
+        height: 220px;
+        padding: 12px;
+        margin-top: 0;
+    }
+
+    .text a:hover {
+        transform: none;
+    }
 }

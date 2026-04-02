@@ -1,6 +1,8 @@
 import style from "./style.module.css";
 import Espeto from "../../assets/imagens/EspetoCarne.png";
 import Espeto2 from "../../assets/imagens/Variante2Espeto.png";
+import Prato from "../../assets/imagens/Variante1Prato.png";
+import Prato2 from "../../assets/imagens/Variante2Prato.png";
 
 export default function HeroCategoria() {
   return (
@@ -18,8 +20,8 @@ export default function HeroCategoria() {
 
       <div className={style.right}>
         <div className={style.efeitoSeparacao}>
-          <img src={Espeto} alt="Espeto com carne" className={style.imagem1} />
-          <img src={Espeto2} alt="Espeto separado da carne" className={style.imagem2} />
+          <img src={Prato} alt="Espeto com carne" className={style.imagem1} />
+          <img src={Prato2} alt="Espeto separado da carne" className={style.imagem2} />
         </div>
       </div>
     </div>

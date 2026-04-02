@@ -8,6 +8,7 @@ import lanche from "../../assets/imagens/lanche.png";
 import doces from "../../assets/imagens/Doces.png";
 import bebidas from "../../assets/imagens/Bebidas.png";
 import Massas from "../../assets/imagens/macarrão.png";
+import Carnes from "../../assets/imagens/Carnes.png";
 
 export default function Categorias() {
   const sectionRef = useRef(null);
@@ -42,8 +43,8 @@ export default function Categorias() {
       </h2>
 
       <div className={style.cards}>
-        <CardCategoria nome="Entradas" receitas={2} icones={entradas} />
-        <CardCategoria nome="Destaques" receitas={4} icones={destaques} />
+        <CardCategoria nome="Saladas" receitas={2} icones={entradas} />
+        <CardCategoria nome="Carnes" receitas={4} icones={Carnes} />
         <CardCategoria nome="Lanche" receitas={3} icones={lanche} />
         <CardCategoria nome="Doces" receitas={3} icones={doces} />
         <CardCategoria nome="Bebidas" receitas={2} icones={bebidas} />

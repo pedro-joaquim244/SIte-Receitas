@@ -29,6 +29,10 @@
   overflow: hidden;
   position: relative;
   transition: transform 0.4s ease;
+  @media(max-width:600px){
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* imagem */
@@ -37,6 +41,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  
 }
 
 /* overlay laranja */
@@ -93,4 +98,111 @@
 .prato:hover .texto span {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVO 850px
+========================= */
+@media (max-width: 850px) {
+  .prato {
+    width: 260px;
+    height: 290px;
+  }
+
+  .imagem {
+    width: 260px;
+    height: 260px;
+  }
+
+  .texto {
+    padding: 16px;
+  }
+
+  .texto h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .texto span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .prato {
+    width: 200px;
+    height: 200px;
+  }
+
+  .imagem {
+    width: 200px;
+    height: 200px;
+  }
+
+  .texto {
+    padding: 6px;
+  }
+
+  .texto h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .texto span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 485px) {
+  .prato {
+    width: 180px;
+    height: 180px;
+  }
+
+  .imagem {
+    width: 180px;
+    height: 180px;
+  }
+
+  .texto {
+    padding: 6px;
+  }
+
+  .texto h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .texto span {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .prato {
+    width: 220px;
+    height: 250px;
+    border-radius: 22px;
+  }
+
+  .imagem {
+    width: 220px;
+    height: 220px;
+  }
+
+  .texto {
+    padding: 14px;
+  }
+
+  .texto h1 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .texto span {
+    font-size: 13px;
+  }
+
+  .prato:hover .imagem img {
+    transform: scale(1.03);
+  }
 }
