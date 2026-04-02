@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import style from "./style.module.css";
 import Carne from "../Card-Comida";
 import Bife from "../../assets/imagens/BifeAcebolado.png";
@@ -13,54 +14,71 @@ import Panqueca from "../../assets/imagens/panqueca.png";
 import Escondidinho from "../../assets/imagens/escondidinho.png";
 import Molho from "../../assets/imagens/molho-madeira.png";
 
-
 export default function Comidas() {
+  const [visivel, setVisivel] = useState([false, false, false]);
+
+  const refs = [useRef(), useRef(), useRef()];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = refs.findIndex(ref => ref.current === entry.target);
+
+          if (entry.isIntersecting) {
+            setVisivel((prev) => {
+              const novo = [...prev];
+              novo[index] = true;
+              return novo;
+            });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    refs.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className={style.container}>
 
-      {/* círculos decorativos */}
-      <div className={style.circulo}></div>
-      <div className={style.circuloDireita}></div>
+      {/* ESQUERDA */}
+      <section className={style.secao} ref={refs[0]}>
+        <h2 className={style.subtitle}>Carnes</h2>
+        <div className={`${style.fileira} ${visivel[0] ? style.showEsquerda : ""}`}>
+          <Carne nome="Bife acebolado" imagem={Bife} />
+          <Carne nome="Carne assada" imagem={Carnes} />
+          <Carne nome="Churrasco Gaúcho" imagem={Churrasco} />
+          <Carne nome="Carne e fritas" imagem={CarneFritas} />
+        </div>
+      </section>
 
-      <h2 className={style.subtitle}>Carnes</h2>
-      <div className={style.fileira}>
-        <Carne nome="Bife acebolado"
-          imagem={Bife}
-          estrela="★★★★"
-          nota="4.2"
-        />
-        <Carne nome="Carne assada"
-          imagem={Carnes}
-          estrela="★★★★★"
-          nota="5"
-        />
-        <Carne nome="Churrasco Gaucho"
-          imagem={Churrasco}
-          estrela="★★★"
-          nota="3.4"
-        />
-        <Carne nome="Carne e fritas"
-          imagem={CarneFritas}
-          estrela="★★★★★"
-          nota="4.7"
-        />
-      </div>
+      {/* DIREITA */}
+      <section className={style.secao} ref={refs[1]}>
+        <h2 className={style.subtitle}>Aves</h2>
+        <div className={`${style.fileira} ${visivel[1] ? style.showDireita : ""}`}>
+          <Carne nome="Frango grelhado" imagem={Grelhado} />
+          <Carne nome="Estrogonofe de frango" imagem={Estrogonofe} />
+          <Carne nome="Frango assado" imagem={Frango} />
+          <Carne nome="Frango com vagem" imagem={FrangoVagem} />
+        </div>
+      </section>
 
-      <h2 className={style.subtitle}>Aves</h2>
-      <div className={style.fileira}>
-        <Carne nome="Frango Grelhado" imagem={Grelhado} estrela="★★★★★" nota="4.8" />
-        <Carne nome="Estrogonofe de frango" imagem={Estrogonofe} estrela="★★★★" nota="4.3" />
-        <Carne nome="Frango assado" imagem={Frango} estrela="★★★★★" nota="4.9" />
-        <Carne nome="Frango com Vagem" imagem={FrangoVagem} estrela="★★★★★" nota="4.7" />
-      </div>
-
-      <h2 className={style.subtitle}>Pratos rápidos</h2>
-      <div className={style.fileira}>
-        <Carne nome="Yaksoba" imagem={Yaksoba} estrela="★★★★★" nota="4.6" />
-        <Carne nome="Panqueca" imagem={Panqueca} estrela="★★★★" nota="4.5" />
-        <Carne nome="Escondidinho" imagem={Escondidinho} estrela="★★★" nota="3.3" />
-        <Carne nome="Moela á madeira" imagem={Molho} estrela="★★★★★" nota="4.8" />
-      </div>
+      {/* ESQUERDA */}
+      <section className={style.secao} ref={refs[2]}>
+        <h2 className={style.subtitle}>Pratos rápidos</h2>
+        <div className={`${style.fileira} ${visivel[2] ? style.showEsquerda : ""}`}>
+          <Carne nome="Yaksoba" imagem={Yaksoba} />
+          <Carne nome="Panqueca" imagem={Panqueca} />
+          <Carne nome="Escondidinho" imagem={Escondidinho} />
+          <Carne nome="Moela à madeira" imagem={Molho} />
+        </div>
+      </section>
 
     </div>
   );

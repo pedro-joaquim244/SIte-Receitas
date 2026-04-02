@@ -1,67 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap');
+
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 40px 0 70px;
+}
 
-    position: relative;
-    /* contexto dos círculos */
-    z-index: 1;
-
-    overflow: hidden;
-
+/* cada bloco da seção */
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
 }
 
 /* fileiras */
 .fileira {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    position: relative;
-    z-index: 2;
-    margin-bottom: 20px ;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 38px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  padding: 0 40px;
 }
 
-/* subtítulo */
+/* 🔥 TÍTULO CORRIGIDO */
 .subtitle {
-    font-family: 'Averia';
-    font-size: 28px;
-    color: #c94f1d;
-    font-weight: 700;
-    -webkit-text-stroke: 1px #c94f1d;
-    text-align: center;
-    margin-top: 8px;
-    position: relative;
-    z-index: 2;
+  font-family: "Averia Serif Libre", serif;
+  font-size: 42px;
+  color: #c94f1d;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+/* linha elegante embaixo */
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: #c94f1d;
 }
 
 /* círculo ESQUERDA */
 .circulo {
+    content: "";
     position: absolute;
     width: 400px;
     height: 400px;
-    border: 70px solid #7a2500;
+    border: 70px solid #ce5a2c;
     border-radius: 50%;
-
-    left: -204px;
-    top: 37%;
+    left: -265px;
+    top: 49%;
     transform: translateY(-50%);
-
     z-index: 0;
-    pointer-events: none;
 }
 
 /* círculo DIREITA */
 .circuloDireita {
+     content: "";
     position: absolute;
     width: 400px;
     height: 400px;
-    border: 70px solid #7a2500;
-    border-radius: 86%;
-    right: -204px;
-    top: 67%;
+    border: 70px solid #ce5a2c;
+    border-radius: 50%;
+    left: -265px;
+    top: 49%;
     transform: translateY(-50%);
     z-index: 0;
-    pointer-events: none;
+}
+
+/* responsivo */
+@media (max-width: 1200px) {
+  .fileira {
+    gap: 28px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    gap: 50px;
+    padding: 30px 0 50px;
+  }
+
+  .secao {
+    gap: 22px;
+  }
+
+  .subtitle {
+    font-size: 34px;
+  }
+
+  .subtitle::after {
+    width: 90px;
+  }
+
+  .circulo {
+    width: 280px;
+    height: 280px;
+    border-width: 45px;
+    left: -170px;
+    top: 32%;
+  }
+
+  .circuloDireita {
+    width: 280px;
+    height: 280px;
+    border-width: 45px;
+    right: -170px;
+    top: 76%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    gap: 42px;
+    padding: 20px 0 40px;
+  }
+
+  .fileira {
+    gap: 22px;
+    padding: 0 16px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .subtitle::after {
+    width: 70px;
+    height: 3px;
+  }
+
+  .circulo {
+    width: 220px;
+    height: 220px;
+    border-width: 34px;
+    left: -145px;
+    top: 30%;
+    opacity: 0.8;
+  }
+
+  .circuloDireita {
+    width: 220px;
+    height: 220px;
+    border-width: 34px;
+    right: -145px;
+    top: 78%;
+    opacity: 0.8;
+  }
+} 
+
+
+.fileira {
+  display: flex;
+  gap: 20px;
+}
+
+/* estado inicial (escondido) */
+.fileira > * {
+  opacity: 0;
+}
+
+/* ESQUERDA */
+.showEsquerda > * {
+  transform: translateX(-120px);
+  animation: entrarEsquerda 0.4s linear forwards;
+}
+
+/* DIREITA */
+.showDireita > * {
+  transform: translateX(120px);
+  animation: entrarDireita 0.4s linear forwards;
+}
+
+/* delay em cascata */
+.showEsquerda > *:nth-child(1),
+.showDireita > *:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.showEsquerda > *:nth-child(2),
+.showDireita > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.showEsquerda > *:nth-child(3),
+.showDireita > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.showEsquerda > *:nth-child(4),
+.showDireita > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* animações */
+@keyframes entrarEsquerda {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entrarDireita {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -9,12 +9,12 @@
 .circulo {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   border: 70px solid #ce5a2c;
   border-radius: 50%;
   left: -265px;
-  top: 53%;
+  top: 49%;
   transform: translateY(-50%);
   z-index: 0;
 }

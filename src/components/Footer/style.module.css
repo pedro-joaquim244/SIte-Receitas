@@ -1,214 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap');
+
 .footer {
   width: 100%;
-  background: rgb(201, 79, 29);
+  margin-top: 70px;
   color: white;
-  margin-top: 50px;
-
-  position: relative;   /* 🔥 ESSENCIAL */
-  z-index: 999;         /* 🔥 fica acima dos círculos */
-
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  position: relative;
   overflow: hidden;
+
+  background: linear-gradient(135deg, #c94f1d 0%, #d85a22 45%, #b63f12 100%);
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* brilhos decorativos */
+.glow1,
+.glow2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  top: -80px;
+  left: -60px;
+}
+
+.glow2 {
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 220, 180, 0.08);
+  right: -90px;
+  bottom: 30px;
 }
 
 /* container principal */
 .container {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 60px 100px;
+  gap: 50px;
   flex-wrap: wrap;
-  gap: 40px;
 
-  position: relative;
-  z-index: 2; /* 🔥 acima dos círculos */
+  padding: 65px 90px 55px;
 }
 
-/* títulos */
-.container h2 {
-  font-size: 22px;
-  margin-bottom: 18px;
-  font-weight: bold;
-}
-
-/* explore */
-.explore {
+/* colunas */
+.coluna {
+  min-width: 220px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.explore a {
-  display: inline-block;
-  width: fit-content;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 400;
+/* 🔥 SUBTÍTULOS COM AVERIA */
+.coluna h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
   position: relative;
-  line-height: 1.2;
-  font-family: "montserrat";
+  width: fit-content;
+  color: #fff;
+
+  font-family: "Averia Serif Libre", serif;
+  letter-spacing: 0.5px;
 }
 
-.explore a::after {
+.coluna h2::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -8px;
+  width: 55px;
+  height: 4px;
+  border-radius: 10px;
+  background: #ffd3b8;
+}
+
+/* links explore */
+.coluna a {
+  width: fit-content;
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.coluna a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
-
+  background: #fff;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.explore a:hover::after {
+.coluna a:hover {
+  transform: translateX(6px);
+  color: #ffe8db;
+}
+
+.coluna a:hover::after {
   transform: scaleX(1);
 }
 
-/* redes sociais */
-.redes {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.item {
+/* itens sociais e contato */
+.item,
+.itemContato {
+  width: fit-content;
   display: flex;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
-
-  width: fit-content;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 17px;
-  font-family: "montserrat";
-  font-weight: 400;
+  gap: 12px;
   position: relative;
-  line-height: 1.2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.item::after {
+.item span,
+.itemContato p {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+
+/* underline animado */
+.item span::after,
+.itemContato p::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
-
+  bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
-
+  background: #fff;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-.item:hover::after {
+.item:hover,
+.itemContato:hover {
+  transform: translateX(6px);
+}
+
+.item:hover span::after,
+.itemContato:hover p::after {
   transform: scaleX(1);
 }
 
-/* contato */
-.contato {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-family: "montserrat";
-  font-weight: 400;
+/* ícones */
+.svg {
+  font-size: 18px;
+  color: #fff3eb;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.contato p {
-  display: inline-block;
-  width: fit-content;
-  cursor: pointer;
-  font-size: 17px;
-  position: relative;
-}
-
-/* linha hover */
-.contato p::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.contato p:hover::after {
-  transform: scaleX(1);
+.item:hover .svg,
+.itemContato:hover .svg {
+  transform: scale(1.15);
+  color: #ffe0cc;
 }
 
 /* barra inferior */
 .copy {
-  background: #531906;
-  padding: 20px;
-
   position: relative;
   z-index: 2;
+  background: linear-gradient(90deg, #551805 0%, #6a1f08 50%, #4c1404 100%);
+  padding: 22px 20px;
 }
 
-/* conteúdo central */
+/* conteúdo da barra */
 .copyContent {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 16px;
   flex-wrap: wrap;
   text-align: center;
 }
 
-/* ícone */
 .icone {
-  width: 50px;
-  height: 50px;
-  background: #f5e6d8;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
+  background: #f7e7da;
+  color: #7a1f00;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7a1f00;
-  font-size: 20px;
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .copyContent span {
-  font-size: 16px;
-}
-
-.svg {
-  margin-top: 2px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  letter-spacing: 0.3px;
 }
 
 /* responsivo */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-    padding: 40px 30px;
+    align-items: center;
     text-align: center;
+    padding: 45px 30px 40px;
   }
 
-  .item {
+  .coluna {
+    align-items: center;
+  }
+
+  .coluna h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .item,
+  .itemContato {
     justify-content: center;
   }
 
-  .explore {
-    align-items: center;
+  .coluna a:hover,
+  .item:hover,
+  .itemContato:hover {
+    transform: none;
   }
 }
 
-/* 🔥 GARANTIA FINAL: círculos SEMPRE atrás */
-.circulo,
-.circuloDireita {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
+@media (max-width: 500px) {
+  .container {
+    padding: 35px 20px;
+    gap: 35px;
+  } 
+
+  .coluna h2 {
+    font-size: 24px;
+  }
+
+  .coluna a,
+  .item span,
+  .itemContato p {
+    font-size: 17px;
+  }
+
+  .copyContent span {
+    font-size: 16px;
+  }
+
+  .icone {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 }
