@@ -8,6 +8,7 @@
     padding: 80px 60px;
     overflow: hidden;
     margin-top: 56px;
+    box-sizing: border-box;
 }
 
 .left {
@@ -22,9 +23,10 @@
     font-family: "Averia Serif Libre", serif;
     font-size: 120px;
     color: #c94f1d;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     font-weight: 700;
     -webkit-text-stroke: 4px #c94f1d;
+    line-height: 0.95;
 }
 
 .left h5 {
@@ -32,14 +34,14 @@
     font-size: 28px;
     font-weight: 700;
     color: #b4450d;
-    margin-bottom: 18px;
+    margin: 0 0 18px 0;
 }
 
 .left p {
     font-size: 20px;
     color: #333;
     line-height: 1.7;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     max-width: 842px;
 }
 
@@ -51,7 +53,6 @@
     position: relative;
 }
 
-/* mais afastado e estático */
 .efeitoSeparacao {
     position: relative;
     width: 420px;
@@ -63,7 +64,6 @@
     margin-left: 40px;
 }
 
-/* imagens base */
 .imagem1,
 .imagem2 {
     position: absolute;
@@ -76,21 +76,18 @@
     pointer-events: none;
 }
 
-/* imagem normal */
 .imagem1 {
     opacity: 1;
     transform: translateY(0) rotate(0deg) scale(1);
     z-index: 2;
 }
 
-/* imagem separada começa escondida */
 .imagem2 {
     opacity: 0;
     transform: translateY(20px) rotate(0deg) scale(0.96);
     z-index: 3;
 }
 
-/* hover */
 .efeitoSeparacao:hover .imagem1 {
     opacity: 0;
     transform: translateY(-10px) rotate(0deg) scale(0.95);
@@ -101,7 +98,6 @@
     transform: translateY(0) rotate(0deg) scale(1);
 }
 
-/* responsivo */
 @media (max-width: 1200px) {
     .content {
         gap: 70px;
@@ -135,8 +131,12 @@
     .content {
         flex-direction: column;
         text-align: center;
-        padding: 60px 30px;
-        gap: 40px;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: auto;
+        padding: 50px 25px 30px;
+        gap: 20px;
+        margin-top: 60px;
     }
 
     .left,
@@ -159,6 +159,7 @@
     .left p {
         font-size: 18px;
         max-width: 100%;
+        margin-bottom: 0;
     }
 
     .efeitoSeparacao {
@@ -170,5 +171,39 @@
     .imagem1,
     .imagem2 {
         max-width: 230px;
+    }
+}
+
+@media (max-width: 550px) {
+    .content {
+        min-height: auto;
+        padding: 20px 15px 10px;
+        gap: 10px;
+        margin-top: 70px;
+    }
+
+    .left h1 {
+        font-size: 52px;
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+
+    .left h5 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .left p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .efeitoSeparacao {
+        display: none;
     }
 }
