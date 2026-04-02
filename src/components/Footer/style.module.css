@@ -61,7 +61,7 @@
   gap: 16px;
 }
 
-/* 🔥 SUBTÍTULOS COM AVERIA */
+/* títulos */
 .coluna h2 {
   font-size: 28px;
   font-weight: 700;
@@ -69,20 +69,8 @@
   position: relative;
   width: fit-content;
   color: #fff;
-
   font-family: "Averia Serif Libre", serif;
   letter-spacing: 0.5px;
-}
-
-.coluna h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 55px;
-  height: 4px;
-  border-radius: 10px;
-  background: #ffd3b8;
 }
 
 /* links explore */
@@ -112,7 +100,7 @@
 
 .coluna a:hover {
   transform: translateX(6px);
-  color: #ffe8db;
+  color: #ffffff;
 }
 
 .coluna a:hover::after {
@@ -169,7 +157,7 @@
 /* ícones */
 .svg {
   font-size: 18px;
-  color: #fff3eb;
+  color: #fcfcfc;
   flex-shrink: 0;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -177,7 +165,7 @@
 .item:hover .svg,
 .itemContato:hover .svg {
   transform: scale(1.15);
-  color: #ffe0cc;
+  color: #ffffff;
 }
 
 /* barra inferior */
@@ -231,11 +219,6 @@
     align-items: center;
   }
 
-  .coluna h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .item,
   .itemContato {
     justify-content: center;
@@ -252,7 +235,7 @@
   .container {
     padding: 35px 20px;
     gap: 35px;
-  } 
+  }
 
   .coluna h2 {
     font-size: 24px;

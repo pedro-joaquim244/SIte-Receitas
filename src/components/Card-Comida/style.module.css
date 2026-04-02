@@ -3,17 +3,18 @@
   background: #c94f1d;
   border-radius: 20px;
   padding: 16px;
-  font-family: "Averia", sans-serif;
+  font-family: "Averia Serif Libre", serif;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
   position: relative;
+  box-sizing: border-box;
+
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
 }
 
-/* efeito */
+/* 💥 PULINHO REAL */
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-15px);
+  background: #a0380f;
 }
 
 /* imagem */
@@ -35,36 +36,33 @@
   transition: transform 0.3s ease;
 }
 
+/* zoom imagem */
 .card:hover .imagemContainer img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* conteúdo */
 .conteudo {
   margin-top: 12px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-/* 🔥 TÍTULO COM ALTURA FIXA */
+/* nome */
 .nome {
   margin: 0;
   font-size: 26px;
   color: white;
   font-weight: 700;
   line-height: 1.1;
-
   height: 58px;
   overflow: hidden;
 
-  -webkit-box-orient: vertical;
-
   display: flex;
-    align-items: center;
-    
+  align-items: center;
+  justify-content: center;
 }
 
 /* avaliação */
@@ -72,48 +70,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  margin-top: 6px;
+  gap: 8px;
+  margin-top: 8px;
 }
 
+/* estrelas */
 .estrelas {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
+/* nota */
 .nota {
   font-size: 14px;
   color: #ffffff;
   font-weight: 500;
-}
-
-/* botão fixo */
-.botao {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-
-  width: 55px;
-  height: 55px;
-  background: rgb(238, 157, 122);
-  border-radius: 50%;
-  border: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.botao:hover {
-  transform: scale(1.1);
-  background: rgb(172, 109, 82);
-}
-
-/* ícone */
-.icone {
-  width: 24px;
-  height: 24px;
 }

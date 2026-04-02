@@ -5,59 +5,222 @@
         "Tempo de preparo": "1 hora",
         "Categoria": "Destaques",
         "imagem": "/imagens/Arroz.png",
-        "Pais originario":"Grecia"
+        "Continente": "Europa"
     },
     {
         "id": 2,
-        "titulo": "Tender na panela",
-        "Tempo de preparo": "2 hora",
+        "titulo": "Risotto de Bacon",
+        "Tempo de preparo": "35 minutos",
         "Categoria": "Destaques",
-        "imagem": "/imagens/carneAssada.png"
+        "imagem": "./imagens/risotto.png",
+        "Continente": "Europa"
     },
     {
         "id": 3,
-        "titulo": "Macarraão com vagem",
-        "Tempo de preparo": "1 hora",
+        "titulo": "Frango Grelhado",
+        "Tempo de preparo": "30 minutos",
         "Categoria": "Destaques",
-        "imagem": "/imagens/CanePanela.png"
+        "imagem": "./imagens/frango.png",
+        "Continente": "America do norte"
     },
     {
         "id": 4,
-        "titulo": "Frango Grelhado",
-        "Tempo de preparo": "1 hora e 45 minutos",
+        "titulo": "Lombo Assado",
+        "Tempo de preparo": "1h30",
         "Categoria": "Destaques",
-        "imagem": "/imagens/frango.png"
+        "imagem": "./imagens/lombo.png",
+        "Continente": "Europa"
     },
     {
         "id": 5,
-        "titulo": "Camarão no azeite",
-        "Tempo de preparo": "45 minutos",
-        "Categoria": "Destaques",
-        "imagem": "/imagens/imagem1.png"
+        "titulo": "Wrap Nutritivo",
+        "Tempo de preparo": "15 minutos",
+        "Categoria": "Lanches",
+        "imagem": "./imagens/wrap.png",
+        "Continente": "America do norte"
     },
     {
         "id": 6,
-        "titulo": "Camarão com manga",
-        "Tempo de preparo": "1 hora e 25 minutos",
-        "Categoria": "Destaques",
-        "imagem": "/imagens/imagem9.jpg"
+        "titulo": "Hambúrguer Artesanal",
+        "Tempo de preparo": "30 minutos",
+        "Categoria": "Lanches",
+        "imagem": "./imagens/hamburguer.png",
+        "Continente": "America do norte"
     },
     {
         "id": 7,
-        "titulo": "Macarrão alho e oleo",
-        "Tempo de preparo": "35 minutos",
-        "Categoria": "Destaques",
-        "imagem": "/imagens/imagem8.jpg"
+        "titulo": "Sanduíche Club",
+        "Tempo de preparo": "20 minutos",
+        "Categoria": "Lanches",
+        "imagem": "./imagens/club.png",
+        "Continente": "America do norte"
     },
     {
         "id": 8,
-        "titulo": "Vieiras Grelhadas",
-        "Tempo de preparo": "55 minutos",
-        "rendimento": "4",
-        "dificuldade": "dificil",
-        "ingredientes": "",
-        "molho": false,
-        "categoria": "Destaques",
-        "imagem": "/imagens/imagem5.png"
+        "titulo": "Bruschettas",
+        "Tempo de preparo": "15 minutos",
+        "Categoria": "Entradas",
+        "imagem": "./imagens/bruschetta.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 9,
+        "titulo": "Sopa de Legumes",
+        "Tempo de preparo": "30 minutos",
+        "Categoria": "Entradas",
+        "imagem": "./imagens/sopa.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 10,
+        "titulo": "Caldo Verde",
+        "Tempo de preparo": "40 minutos",
+        "Categoria": "Entradas",
+        "imagem": "./imagens/caldo.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 11,
+        "titulo": "Brownie",
+        "Tempo de preparo": "30 minutos",
+        "Categoria": "Doces",
+        "imagem": "./imagens/brownie.png",
+        "Continente": "America do norte"
+    },
+    {
+        "id": 12,
+        "titulo": "Cheesecake",
+        "Tempo de preparo": "1 hora",
+        "Categoria": "Doces",
+        "imagem": "./imagens/cheesecake.png",
+        "Continente": "America do norte"
+    },
+    {
+        "id": 13,
+        "titulo": "Pudim",
+        "Tempo de preparo": "1h30",
+        "Categoria": "Doces",
+        "imagem": "./imagens/pudim.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 14,
+        "titulo": "Café",
+        "Tempo de preparo": "5 minutos",
+        "Categoria": "Bebidas",
+        "imagem": "./imagens/cafe.png",
+        "Continente": "Africa"
+    },
+    {
+        "id": 15,
+        "titulo": "Suco Natural",
+        "Tempo de preparo": "5 minutos",
+        "Categoria": "Bebidas",
+        "imagem": "./imagens/suco.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 16,
+        "titulo": "Milkshake",
+        "Tempo de preparo": "10 minutos",
+        "Categoria": "Bebidas",
+        "imagem": "./imagens/milkshake.png",
+        "Continente": "America do norte"
+    },
+    {
+        "id": 17,
+        "titulo": "Salada com Frutas",
+        "Tempo de preparo": "10 minutos",
+        "Categoria": "Vegano",
+        "imagem": "./imagens/salada.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 18,
+        "titulo": "Legumes Grelhados",
+        "Tempo de preparo": "20 minutos",
+        "Categoria": "Vegano",
+        "imagem": "./imagens/legumes.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 19,
+        "titulo": "Arroz com Vegetais",
+        "Tempo de preparo": "25 minutos",
+        "Categoria": "Vegano",
+        "imagem": "./imagens/arroz_veg.png",
+        "Continente": "Asia"
+    },
+    {
+        "id": 20,
+        "titulo": "Frango Grelhado Simples",
+        "Tempo de preparo": "25 minutos",
+        "Categoria": "Sem Lactose",
+        "imagem": "./imagens/frango.png",
+        "Continente": "America do norte"
+    },
+    {
+        "id": 21,
+        "titulo": "Peixe Assado",
+        "Tempo de preparo": "30 minutos",
+        "Categoria": "Sem Lactose",
+        "imagem": "./imagens/peixe.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 22,
+        "titulo": "Salada Verde",
+        "Tempo de preparo": "10 minutos",
+        "Categoria": "Sem Lactose",
+        "imagem": "./imagens/salada_verde.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 23,
+        "titulo": "Feijoada",
+        "Tempo de preparo": "2 horas",
+        "Categoria": "Destaques",
+        "imagem": "./imagens/feijoada.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 24,
+        "titulo": "Strogonoff de Carne",
+        "Tempo de preparo": "40 minutos",
+        "Categoria": "Destaques",
+        "imagem": "./imagens/strogonoff.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 25,
+        "titulo": "Torta de Limão",
+        "Tempo de preparo": "1 hora",
+        "Categoria": "Doces",
+        "imagem": "./imagens/torta_limao.png",
+        "Continente": "America do norte"
+    },
+    {
+        "id": 26,
+        "titulo": "Lasanha de Berinjela",
+        "Tempo de preparo": "50 minutos",
+        "Categoria": "Vegano",
+        "imagem": "./imagens/lasanha_berinjela.png",
+        "Continente": "Europa"
+    },
+    {
+        "id": 27,
+        "titulo": "Arroz com Frango",
+        "Tempo de preparo": "35 minutos",
+        "Categoria": "Sem Lactose",
+        "imagem": "./imagens/arroz_frango.png",
+        "Continente": "America do sul"
+    },
+    {
+        "id": 28,
+        "titulo": "Carne Assada",
+        "Tempo de preparo": "1 hora",
+        "Categoria": "Sem Lactose",
+        "imagem": "./imagens/carne_assada.png",
+        "Continente": "America do sul"
     }
 ]
