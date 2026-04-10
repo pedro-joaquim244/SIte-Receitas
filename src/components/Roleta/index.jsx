@@ -107,7 +107,14 @@ export default function Roleta() {
             })}
           </div>
 
-          <div className={styles.centro}>🍴</div>
+          {/* 🔥 CENTRO AGORA CLICÁVEL */}
+          <button
+  className={styles.centro}
+  onClick={girar}
+  disabled={girando}
+>
+  🍴
+</button>
         </div>
 
         <div className={styles.texto}>
